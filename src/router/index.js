@@ -10,7 +10,8 @@ import Login from '../views/Login'
 import { getToken } from '../utils/auth'
 import { Toast } from 'vant'
 import store from '../store'
-
+//地址页面
+import AddressList from '../views/manager/address/List'
 
 Vue.use(VueRouter)
 
@@ -47,6 +48,9 @@ const routes = [
     },{
       path: 'user',
       component: User,
+    },{
+      path: 'address',
+      component: AddressList,
     }]
   },
   {

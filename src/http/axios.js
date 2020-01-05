@@ -49,7 +49,7 @@ export function post(url,data){
     data:qs.stringify(data),
     timeout:10000,
     headers: {
-      'X-Requested-With': 'XMLHttpRequest',
+      'X-Requested-With': 'XMLHttpRequest',//封装
       'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'
     }
   })
