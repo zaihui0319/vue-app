@@ -1,9 +1,9 @@
 import axios from 'axios';
 import qs from 'qs'
 import {Toast} from 'vant'
-
+import router from "../router"
 // 全局配置
-axios.defaults.baseURL = 'http://localhost:6677';
+axios.defaults.baseURL = 'http://localhost:6677';//'http://localhost:6677'
 
 
 // Add a response interceptor
@@ -16,6 +16,9 @@ axios.interceptors.response.use(function (response) {
   // 统一异常处理
   if(data.status !== 200){
     Toast(data.message);
+    if(data.message === "token失效，请重新登录"){
+      router.push("/login")
+    }
     return Promise.reject(data.message);
   }
   return response;
