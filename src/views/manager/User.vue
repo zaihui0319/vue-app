@@ -6,8 +6,10 @@
       </div>
       <div class="name">{{info.name}}</div>
     </div>
-    <van-cell title="常用地址" is-link to="/manager/address"/>
-    <van-cell title="所有订单" is-link to="/manager/order"/>
+    
+    <van-cell title="常用地址" is-link to="/manager/address" />
+    <van-cell title="所有订单" is-link to="/manager/order" />
+
     <div class="btn" @click="logoutHandler">
       退出
     </div>
@@ -41,7 +43,6 @@ export default {
   background: #1659a0;
   margin-bottom: 2em;
 }
-
 .header .photo {
   margin: 0 auto;
   width: 10em;
@@ -56,13 +57,11 @@ export default {
   line-height: 3em;
   font-size: 16px;
   color: #ffffff;
-
 }
 .header .photo img {
  width: 100%;
  border-radius: 50%;
 }
-
 .btn {
   width: 90%;
   margin: 1em auto;
@@ -71,5 +70,4 @@ export default {
   border: 1px solid #ededed;
   border-radius: 1.5em;
 }
-
 </style>
